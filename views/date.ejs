@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>date</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>date</h1>
+    <form action="/accept" method="POST" id="dateForm"  >
+        <input type="date" name="todayDate" required>
+        <select name="typeofExercise" form="dateForm" required>
+            <option value="pull">Pull</option>
+            <option value="push">Push</option>
+            <option value="legs">Legs</option>
+        </select>
+        <input type="submit" value="submit">
+    </form>
+  </body>
+</html>

@@ -22,6 +22,27 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.get('/accept', (req, res) => {
+  res.render('date')
+})
+
+app.get('/push', (req, res) => {
+  res.render('push')
+})
+
+app.get('/pull', (req, res) => {
+  res.render('pull')
+})
+
+app.get('/legs', (req, res) => {
+  res.render('legs')
+})
+
+app.post('/accept', (req, res) => {
+  console.log(req.body);
+  res.redirect(req.body.typeofExercise)
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
